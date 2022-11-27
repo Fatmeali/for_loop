@@ -1,0 +1,24 @@
+total, musala, montBlanc, kilimanjaro, k2, everest = 0, 0, 0, 0, 0, 0
+
+number_of_groups = range(int(input()))
+
+for number in number_of_groups:
+    group = int(input())
+
+    if group <= 5:
+        musala += group
+    elif 6 <= group <= 12:
+        montBlanc += group
+    elif 13 <= group <= 25:
+        kilimanjaro += group
+    elif 26 <= group <= 40:
+        k2 += group
+    elif group >= 41:
+        everest += group
+    total += group
+
+print(f"{float(musala / total * 100):.2f}%")
+print(f"{float(montBlanc / total * 100):.2f}%")
+print(f"{float(kilimanjaro / total * 100):.2f}%")
+print(f"{float(k2 / total * 100):.2f}%")
+print(f"{float(everest / total * 100):.2f}%")
